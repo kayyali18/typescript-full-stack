@@ -6,6 +6,10 @@
   "repository": "https://github.com/kayyali18/typescript-full-stack.git",
   "author": "Ahmad Kayyali <kayyali18@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "concurrently \"tsc -w\" \"nodemon dist/js/app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
