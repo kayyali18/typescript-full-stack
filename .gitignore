@@ -6,6 +6,7 @@ npm-debug.log
 *.env
 *.dev
 package-lock.json
+nodemon.json
 
 .DS_Store
 *.lock

@@ -54,7 +54,7 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
  * @param req Request object
  * @param res Response Object
  */
-const saveTodo = async (req: Request, res: Response): Promise<void> => {
+const updateTodo = async (req: Request, res: Response): Promise<void> => {
   try {
     const {
       params: { id },
@@ -94,4 +94,4 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-export { getTodos, saveTodo, addTodo, deleteTodo };
+export { getTodos, updateTodo, addTodo, deleteTodo };
