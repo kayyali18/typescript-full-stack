@@ -83,7 +83,7 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
       req.params.id
     );
 
-    const allTodos: ITodo[] = Todo.find();
+    const allTodos: ITodo[] = await Todo.find();
     res.status(200).json({
       message: "Todo deleted",
       todo: deletedTodo,
