@@ -26,6 +26,7 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 const addTodo = async (req: Request, res: Response): Promise<void> => {
   try {
     // Get req body and match it as an Interface Todo with the following keys
+    console.log(req, res);
     const body = req.body as Pick<ITodo, "name" | "description" | "status">;
 
     // Create new Todo from model

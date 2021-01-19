@@ -39,6 +39,7 @@ exports.getTodos = getTodos;
 const addTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Get req body and match it as an Interface Todo with the following keys
+        console.log(req, res);
         const body = req.body;
         // Create new Todo from model
         const todo = new todo_1.default({
