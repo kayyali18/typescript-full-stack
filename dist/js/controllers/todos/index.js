@@ -23,7 +23,6 @@ const todo_1 = __importDefault(require("../../models/todo"));
 const getTodos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const todos = yield todo_1.default.find();
-        console.log(todos);
         res.status(200).json({ todos });
     }
     catch (error) {
@@ -84,7 +83,6 @@ const updateTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 exports.updateTodo = updateTodo;
 const deleteTodo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(req.params);
         const deletedTodo = yield todo_1.default.findByIdAndRemove(req.params.id);
         const allTodos = yield todo_1.default.find();
         res.status(200).json({
